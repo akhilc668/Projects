@@ -20,7 +20,7 @@
 	<%
 		int id=Integer.parseInt(request.getParameter("id"));
 		Faculty f=ManageFacultyBean.getFacultyById(id);
-	String image = getServletContext().getInitParameter("file-upload") + "" + f.getPicture();
+	String image = getServletContext().getInitParameter("file-download") + "" + f.getPicture();
 	%>
 
 

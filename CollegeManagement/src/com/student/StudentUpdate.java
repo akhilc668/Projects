@@ -62,7 +62,7 @@ public class StudentUpdate extends HttpServlet {
 		HttpSession hs=request.getSession();
 		if(s!=null) {
 			hs.setAttribute("student", s);
-			response.sendRedirect("student_profile.jsp?msg=Updated successfully");
+			response.sendRedirect("student_update_profile.jsp?msg=Updated successfully");
 		}
 		else
 			response.sendRedirect("student_update_profile.jsp?msg=Update failed");

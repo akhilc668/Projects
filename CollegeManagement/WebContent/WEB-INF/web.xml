@@ -7,7 +7,14 @@
 		<description>Location to store uploaded file</description>
 		<param-name>file-upload</param-name>
 		<param-value>
-     files/
+      E:\git\Projects\CollegeManagement\WebContent\files\
+   </param-value>
+	</context-param>
+	<context-param>
+		<description>Location to store uploaded file</description>
+		<param-name>file-download</param-name>
+		<param-value>
+      files\
    </param-value>
 	</context-param>
 </web-app>

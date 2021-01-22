@@ -20,7 +20,7 @@
 	<%
 	int id=Integer.parseInt(request.getParameter("id"));
 		Student stud = ManageStudentBean.getStudentById(id);
-	String image = getServletContext().getInitParameter("file-upload") + "" + stud.getPicture();
+	String image = getServletContext().getInitParameter("file-download") + "" + stud.getPicture();
 	System.out.println(image);
 	%>
 	<div class="container">

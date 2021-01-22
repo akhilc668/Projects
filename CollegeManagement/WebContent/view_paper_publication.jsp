@@ -26,7 +26,7 @@
 			</thead>
 			<%
 				int fid = (Integer) session.getAttribute("fid");
-			String path = getServletContext().getInitParameter("file-upload");
+			String path = getServletContext().getInitParameter("file-download");
 			List li = PaperPublicationBean.getPaperById(fid);
 			Iterator i = li.iterator();
 			while (i.hasNext()) {

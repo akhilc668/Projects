@@ -48,7 +48,7 @@ public class FacultyUpdate extends HttpServlet {
 		HttpSession hs=request.getSession();
 		if(f1!=null) {
 			hs.setAttribute("faculty", f1);
-			response.sendRedirect("faculty_profile.jsp?msg=upadted successfully");
+			response.sendRedirect("faculty_update_profile.jsp?msg=upadted successfully");
 		}
 		else
 			response.sendRedirect("faculty_update_profile.jsp?msg=upadted failed");

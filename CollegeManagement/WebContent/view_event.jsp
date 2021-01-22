@@ -25,7 +25,7 @@
 			</thead>
 			<%
 				int studid = (Integer) session.getAttribute("studid");
-			String path = getServletContext().getInitParameter("file-upload");
+			String path = getServletContext().getInitParameter("file-download");
 			List li = CollegeEventBean.getEventsById(studid);
 			Iterator i = li.iterator();
 			while (i.hasNext()) {

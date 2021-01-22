@@ -24,13 +24,12 @@
 			</thead>
 			<%
 			int studid=(Integer)session.getAttribute("studid");
-			String path=getServletContext().getInitParameter("file-upload");
+			String path=getServletContext().getInitParameter("file-download");
 			List li=InternshipBean.getInternshipById(studid);
 			Iterator i=li.iterator();
 			while(i.hasNext()){
 				Internship p=(Internship)i.next();
 				String file=path+p.getFilename();
-				System.out.println(file);
 			%>
 			<tbody>
 				<tr>
