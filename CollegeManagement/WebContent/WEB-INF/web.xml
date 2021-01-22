@@ -7,7 +7,7 @@
 		<description>Location to store uploaded file</description>
 		<param-name>file-upload</param-name>
 		<param-value>
-      D:\exe\apache-tomcat-9.0.40\webapps\data\
+     files/
    </param-value>
 	</context-param>
 </web-app>
