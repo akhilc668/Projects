@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import com.configure.Configure;
 import com.pojo.faculty.Faculty;
@@ -34,5 +35,14 @@ public class ManageFacultyBean {
 		tx.commit();
 		return i;
 	}
-	
+public static List searchFaculty(String firstname,String lastname,String department) {
+		
+		Session se=Configure.config();
+		Query q=se.createQuery("from Faculty f where f.firstname=:x or f.lastname=:y or f.department=:z");
+				q.setParameter("x", firstname).setParameter("y", lastname).setParameter("z", department);
+				List li=q.list();
+		if(li!=null)
+			return li;
+		return null;
+	}
 }
