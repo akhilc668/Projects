@@ -8,7 +8,8 @@
 </head>
 <body>
 	<%@include file="student.jsp"%>
-	<%@page import="com.pojo.student.Placement,com.student.PlacementBean,java.util.*" %>
+	<%@page
+		import="com.pojo.student.Placement,com.student.PlacementBean,java.util.*"%>
 	<h1 align="center">Welcome to View Placement Page</h1>
 	<div id="right" class="container">
 		<table class="table table-bordered table-info">

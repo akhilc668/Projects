@@ -19,12 +19,12 @@
 				<div class="form-group">
 					<label>Enter First Name : </label> <input type="text"
 						class="form-control" name="firstname"
-						placeholder="Enter First name"> <label>Enter Last Name : </label> <input type="text"
-						class="form-control" name="lastname"
+						placeholder="Enter First name"> <label>Enter Last
+						Name : </label> <input type="text" class="form-control" name="lastname"
 						placeholder="Enter Last name"> <label>Enter
 						Department : </label> <input type="text" class="form-control"
-						name="department" placeholder="Enter Department"> <br> <input
-						type="submit" class="btn btn-primary" value="search"><br>
+						name="department" placeholder="Enter Department"> <br>
+					<input type="submit" class="btn btn-primary" value="search"><br>
 				</div>
 			</form>
 

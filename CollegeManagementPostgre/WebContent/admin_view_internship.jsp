@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,32 +7,36 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@include file="admin.jsp" %>
-<%@page import="com.pojo.student.Internship,com.admin.ViewBean,java.util.*" %>
+	<%@include file="admin.jsp"%>
+	<%@page
+		import="com.pojo.student.Internship,com.admin.ViewBean,java.util.*"%>
 	<h1 align="center">Welcome to View Internship Page</h1>
 
-<div class="container">
-<div class="row justify-content-center align-items-center"
-style="height: 50vh">
-<div class="col-4">
-<div class="card">
-<div class="card-body">
-<form action="admin_view_internship.jsp" align="center">
-<div class="form-group">
-<label>Enter Student name :</label>
-<input type="text" class="form-control" name="name"  placeholder="Enter student name">
+	<div class="container">
+		<div class="row justify-content-center align-items-center"
+			style="height: 50vh">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body">
+						<form action="admin_view_internship.jsp" align="center">
+							<div class="form-group">
+								<label>Enter Student name :</label> <input type="text"
+									class="form-control" name="name"
+									placeholder="Enter student name"> <label>Enter
+									Roll Number : </label> <input type="text" class="form-control"
+									name="rollnumber" placeholder="Enter roll number"> <label>Enter
+									Topic Name : </label> <input type="text" class="form-control"
+									name="topic" placeholder="Enter topic name"> <br>
+								<input type="submit" class="btn btn-primary" value="search"><br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
 
-<label>Enter Roll Number  : </label>
-<input type="text" class="form-control" name="rollnumber"  placeholder="Enter roll number">
-
-<label>Enter Topic Name : </label>
-<input type="text" class="form-control" name="topic"  placeholder="Enter topic name">
-<br>
-<input type="submit" class="btn btn-primary" value="search"><br>
-</form>
-</div></div></div></div></div>	
-<br><br>	
-	
 	<div id="right" class="container">
 		<table class="table table-bordered table-info">
 			<thead>
@@ -84,17 +88,17 @@ style="height: 50vh">
 					String file=path+p.getFilename();
 					System.out.println(file);
 				%>
-				<tbody>
-					<tr>
-						<td><%=p.getName() %></td>
-						<td><%=p.getDepartment()%></td>
-						<td><%=p.getRollnumber()%></td>
-						<td><%=p.getTopic()%></td>
-						<td><%=p.getDuration()%></td>
-						<td><a href="<%=file%>" download>Download</a></td>
-					</tr>
-				</tbody>
-				<%}
+			<tbody>
+				<tr>
+					<td><%=p.getName() %></td>
+					<td><%=p.getDepartment()%></td>
+					<td><%=p.getRollnumber()%></td>
+					<td><%=p.getTopic()%></td>
+					<td><%=p.getDuration()%></td>
+					<td><a href="<%=file%>" download>Download</a></td>
+				</tr>
+			</tbody>
+			<%}
 				}
 			%>
 		</table>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,11 @@
 <title>View Paper Publications</title>
 </head>
 <body>
-<%@include file="faculty.jsp" %>
-<%@page import="com.pojo.faculty.PaperPublications,com.faculty.PaperPublicationBean,java.util.*" %>
+	<%@include file="faculty.jsp"%>
+	<%@page
+		import="com.pojo.faculty.PaperPublications,com.faculty.PaperPublicationBean,java.util.*"%>
 
-<h1 align="center">Welcome to View Paper Publication Page</h1>
+	<h1 align="center">Welcome to View Paper Publication Page</h1>
 
 	<div id="right" class="container">
 		<table class="table table-bordered table-info">

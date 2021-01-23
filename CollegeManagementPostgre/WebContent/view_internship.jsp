@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@include file="student.jsp" %>
-<%@page import="com.pojo.student.Internship,com.student.InternshipBean,java.util.*" %>
+	<%@include file="student.jsp"%>
+	<%@page
+		import="com.pojo.student.Internship,com.student.InternshipBean,java.util.*"%>
 	<h1 align="center">Welcome to View Internship Page</h1>
 	<div id="right" class="container">
 		<table class="table table-bordered table-info">

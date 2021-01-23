@@ -19,12 +19,12 @@
 				<div class="form-group">
 					<label>Enter First Name : </label> <input type="text"
 						class="form-control" name="firstname"
-						placeholder="Enter First name"> <label>Enter Last Name : </label> <input type="text"
-						class="form-control" name="lastname"
-						placeholder="Enter Last name"> <label>Enter
-						Roll Number : </label> <input type="text" class="form-control"
-						name="rollnumber" placeholder="Enter Roll number"> <br> <input
-						type="submit" class="btn btn-primary" value="search"><br>
+						placeholder="Enter First name"> <label>Enter Last
+						Name : </label> <input type="text" class="form-control" name="lastname"
+						placeholder="Enter Last name"> <label>Enter Roll
+						Number : </label> <input type="text" class="form-control"
+						name="rollnumber" placeholder="Enter Roll number"> <br>
+					<input type="submit" class="btn btn-primary" value="search"><br>
 				</div>
 			</form>
 

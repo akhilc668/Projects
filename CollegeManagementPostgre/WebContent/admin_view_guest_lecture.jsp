@@ -13,27 +13,31 @@
 
 	<h1 align="center">Welcome to View Guest Lecture Page</h1>
 
-<div class="container">
-<div class="row justify-content-center align-items-center"
-style="height: 50vh">
-<div class="col-4">
-<div class="card">
-<div class="card-body">
-<form action="admin_view_guest_lecture.jsp" align="center">
-<div class="form-group">
-<label>Enter Date: </label>
-<input type="date" class="form-control" name="date" placeholder="Enter Date">
+	<div class="container">
+		<div class="row justify-content-center align-items-center"
+			style="height: 50vh">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body">
+						<form action="admin_view_guest_lecture.jsp" align="center">
+							<div class="form-group">
+								<label>Enter Date: </label> <input type="date"
+									class="form-control" name="date" placeholder="Enter Date">
 
-<label>Enter topic :</label>
-<input type="text" class="form-control" name="topic"  placeholder="Enter topic name">
-
-<label>Enter Faculty Name : </label>
-<input type="text" class="form-control" name="name"  placeholder="Enter faculty name">
-<br>
-<input type="submit" class="btn btn-primary" value="search"><br>
-</form>
-</div></div></div></div></div>
-<br><br>
+								<label>Enter topic :</label> <input type="text"
+									class="form-control" name="topic"
+									placeholder="Enter topic name"> <label>Enter
+									Faculty Name : </label> <input type="text" class="form-control"
+									name="name" placeholder="Enter faculty name"> <br>
+								<input type="submit" class="btn btn-primary" value="search"><br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
 	<div id="right" class="container">
 		<table class="table table-bordered table-info">
 			<thead>

@@ -11,30 +11,33 @@
 	<%@page
 		import="com.pojo.student.CollegeEvent,com.admin.ViewBean,java.util.*"%>
 	<h1 align="center">Welcome to View Event Page</h1>
-	
-<div class="container">
-<div class="row justify-content-center align-items-center"
-style="height: 50vh">
-<div class="col-4">
-<div class="card">
-<div class="card-body">
-<form action="admin_view_event.jsp" align="center">
-<div class="form-group">
-<label>Enter Student name :</label>
-<input type="text" class="form-control" name="name"  placeholder="Enter student name">
 
-<label>Enter Roll Number  : </label>
-<input type="text" class="form-control" name="rollnumber"  placeholder="Enter roll number">
+	<div class="container">
+		<div class="row justify-content-center align-items-center"
+			style="height: 50vh">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body">
+						<form action="admin_view_event.jsp" align="center">
+							<div class="form-group">
+								<label>Enter Student name :</label> <input type="text"
+									class="form-control" name="name"
+									placeholder="Enter student name"> <label>Enter
+									Roll Number : </label> <input type="text" class="form-control"
+									name="rollnumber" placeholder="Enter roll number"> <label>Enter
+									Event Name : </label> <input type="text" class="form-control"
+									name="eventname" placeholder="Enter event name"> <br>
+								<input type="submit" class="btn btn-primary" value="search"><br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
 
-<label>Enter Event Name : </label>
-<input type="text" class="form-control" name="eventname"  placeholder="Enter event name">
-<br>
-<input type="submit" class="btn btn-primary" value="search"><br>
-</form>
-</div></div></div></div></div>	
-<br><br>		
-	
-	
+
 	<div class="container">
 		<table class="table table-bordered table-info">
 			<thead>

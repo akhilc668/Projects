@@ -39,20 +39,23 @@ body, html {
 			style="width: 50px; height: 50px;"></a>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item"><a class="nav-link" href="student_home.jsp">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="student_update_profile.jsp">Profile</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="student_update_profile.jsp">Profile</a></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Placement Info </a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="add_placement.jsp">Add
-						Placement</a> <a class="dropdown-item" href="view_placement.jsp">View Placement</a>
+					<a class="dropdown-item" href="add_placement.jsp">Add Placement</a>
+					<a class="dropdown-item" href="view_placement.jsp">View
+						Placement</a>
 				</div></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Internship </a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="add_internship.jsp">Add Internship</a> <a
-						class="dropdown-item" href="view_internship.jsp">View Internship</a>
+					<a class="dropdown-item" href="add_internship.jsp">Add
+						Internship</a> <a class="dropdown-item" href="view_internship.jsp">View
+						Internship</a>
 				</div></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
@@ -66,11 +69,13 @@ body, html {
 				data-toggle="dropdown"> Year Wise Scores </a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="add_scores.jsp">Add Score</a> <a
-						class="dropdown-item" href="view_scores.jsp?year=I">1st year score</a> <a
-						class="dropdown-item" href="view_scores.jsp?year=II">2nd year score</a> <a
-						class="dropdown-item" href="view_scores.jsp?year=III">3rd year score</a> <a
-						class="dropdown-item" href="view_scores.jsp?year=IV">4th year score</a> <a
-						class="dropdown-item" href="view_scores.jsp">All year score</a>
+						class="dropdown-item" href="view_scores.jsp?year=I">1st year
+						score</a> <a class="dropdown-item" href="view_scores.jsp?year=II">2nd
+						year score</a> <a class="dropdown-item"
+						href="view_scores.jsp?year=III">3rd year score</a> <a
+						class="dropdown-item" href="view_scores.jsp?year=IV">4th year
+						score</a> <a class="dropdown-item" href="view_scores.jsp">All year
+						score</a>
 				</div></li>
 			<li class="nav-item"><a class="nav-link" href="index.jsp">Logout</a></li>
 		</ul>
