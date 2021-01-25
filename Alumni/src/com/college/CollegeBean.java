@@ -1,40 +1,45 @@
-package com.Alumini;
+package com.college;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.commonfiles.Configure;
-import com.pojo.Alumni;
+import com.pojo.College;
 
+public class CollegeBean {
 
-public class AlumniBean {
-
-
-	public static boolean register(Alumni a) {
+	public static boolean register(College c) {
 		
 		Session se=Configure.config();
 		Transaction tx=se.beginTransaction();
-		Object o=se.save(a);
+		Object o=se.save(c);
 		tx.commit();
 		se.close();
 		if(o!=null)
 			return true;
 		else
 			return false;
+		
 	}
 
-	public static Alumni login(String email, String password) {
+	public static College login(String email, String password) {
+		
 		Session se=Configure.config();
 		Transaction tx=se.beginTransaction();
-		Query qe=se.createQuery("from Alumni a where a.email=:x and a.password=:y and a.status=:z");
+		Query qe=se.createQuery(" from College c where c.email=:x and c.password =:y and c.status=:z");
 		qe.setParameter("x", email);
 		qe.setParameter("y", password);
 		qe.setParameter("z","Accepted");
-		Alumni li=(Alumni) qe.list();
+		College li=(College) qe.list();
 		tx.commit();
 		se.close();
-		
-		return li;		
+		if(li!=null)
+			return li;
+		else
+			return null;
 	}
+
+		
+
 }
