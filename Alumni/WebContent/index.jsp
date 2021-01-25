@@ -8,6 +8,7 @@
 </head>
 <body>
 	<%@include file="main.html"%>
-	<h1 align="center">Welcome to TKR College</h1>
+	<%@page import="com.commonfiles.Configure,org.hibernate.Session" %>
+	<h1 align="center">Welcome to Alumni Management</h1>
 </body>
 </html>

@@ -39,6 +39,7 @@ body, html {
 			style="width: 50px; height: 50px;"></a>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item"><a class="nav-link" href="college_home.jsp">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="college_update_profile.jsp">Update Profile</a></li>
 			<li class="nav-item"><a class="nav-link" href="registered_alumni.jsp">Registered Alumni</a></li>
 			<li class="nav-item"><a class="nav-link" href="track_alumni.jsp">Track Alumnis</a></li>
 			<li class="nav-item"><a class="nav-link" href="college_events.jsp">View Events</a></li>

@@ -21,8 +21,12 @@ if(pages.equals("alumni")){
 <h1 align="center">Welcome to Directorate Email Page</h1>
 <%} %>
 
+<<<<<<< Updated upstream
 <%@page import="com.pojo.Alumni" %>
 <%Alumni s=new Alumni();%>
+=======
+<%String email=(String)session.getAttribute("email");%>
+>>>>>>> Stashed changes
 <div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">
@@ -36,7 +40,7 @@ if(pages.equals("alumni")){
 							</div>
 							<div class="form-group">
 								From: <input type="text" name="from"
-									class="form-control" value="<%=s.getEmail()%>" required="required">
+									class="form-control" value="<%=email%>" readonly="readonly">
 							</div>
 							<div class="form-group">
 								Subject: <input type="text" name="subject"
