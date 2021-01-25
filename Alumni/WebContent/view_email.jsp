@@ -12,19 +12,21 @@
 	if (pages.equals("alumni")) {
 	%>
 	<%@include file="alumni.jsp"%>
+		<h1 align="center">Welcome to Alumni View Emails Page</h1>
 	<%
 		} else if (pages.equals("college")) {
 	%>
 	<%@include file="college.jsp"%>
+		<h1 align="center">Welcome to College View Emails Page</h1>
 	<%
 		} else {
 	%>
 	<%@include file="directorate.jsp"%>
+		<h1 align="center">Welcome to Directorate View Emails Page</h1>
 	<%
 		}
 	%>
 	<%@page import="com.pojo.Events,java.util.*"%>
-	<h1 align="center">Welcome to View Emails Page</h1>
 	<div class="container">
 		<table class="table table-bordered table-info">
 			<thead>
@@ -50,7 +52,7 @@
 				<tr>
 					<td><%=ce.getEid()%></td>
 					<td><%=ce.getDate()%></td>
-					<td><a href="show_email?id=<%=ce.getEid()%>">Show email</a></td>
+					<td><a href="show_email?id=<%=ce.getEid()%>">Show Content</a></td>
 				</tr>
 			</tbody>
 			<%

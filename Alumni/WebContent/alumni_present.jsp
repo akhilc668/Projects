@@ -10,7 +10,7 @@
 <%@include file="alumni.jsp" %>
 <h1 align="center">Welcome to Alumni Update Profile Page</h1>
 <%@page import="com.pojo.Alumni" %>
-<%Alumni s=new Alumni();%>
+<%Alumni s=(Alumni)session.getAttribute("alumni");%>
 <div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">

@@ -11,13 +11,16 @@
 if(pages.equals("alumni")){
 %>
 <%@include file="alumni.jsp" %>
+<h1 align="center">Welcome to Alumni Email Page</h1>
 <%}else if(pages.equals("college")){
 %>
 <%@include file="college.jsp" %>
+<h1 align="center">Welcome to College Email Page</h1>
 <%}else{%>
 <%@include file="directorate.jsp" %>
+<h1 align="center">Welcome to Directorate Email Page</h1>
 <%} %>
-<h1 align="center">Welcome to Email Page</h1>
+
 <%@page import="com.pojo.Alumni" %>
 <%Alumni s=new Alumni();%>
 <div class="container">
