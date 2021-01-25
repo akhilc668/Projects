@@ -21,12 +21,7 @@ if(pages.equals("alumni")){
 <h1 align="center">Welcome to Directorate Email Page</h1>
 <%} %>
 
-<<<<<<< Updated upstream
-<%@page import="com.pojo.Alumni" %>
-<%Alumni s=new Alumni();%>
-=======
 <%String email=(String)session.getAttribute("email");%>
->>>>>>> Stashed changes
 <div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">
