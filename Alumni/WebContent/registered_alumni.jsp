@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%@include file="college.jsp"%>
-	<h1 align="center">Welcome to Manage Alumni Page</h1>
+	<h1 align="center">Welcome to Registered Alumni Page</h1>
 	<%@page import="com.pojo.Alumni,java.util.*"%>
 	<div class="container">
 		<div class="row justify-content-center align-items-center"

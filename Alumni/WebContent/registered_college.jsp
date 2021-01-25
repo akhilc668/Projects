@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@include file="college.jsp"%>
-	<h1 align="center">Welcome to Manage Alumni Page</h1>
+	<%@include file="directorate.jsp"%>
+	<h1 align="center">Welcome to Registered College Page</h1>
 	<%@page import="com.pojo.College,com.directorate.ManageCollegeBean,java.util.*"%>
 	<div class="container">
 		<div class="row justify-content-center align-items-center"
