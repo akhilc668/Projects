@@ -20,6 +20,8 @@ public class Events {
 	private String topic;
 	@Column(name = "date")
 	private String date;
+	@Column(name = "collegename")
+	private String collegename;
 	@Column(name = "filename")
 	private String filename;
 	public int getEid() {
@@ -46,6 +48,13 @@ public class Events {
 	}
 	public void setDate(String date) {
 		this.date = date;
+	}
+	
+	public String getCollegename() {
+		return collegename;
+	}
+	public void setCollegename(String collegename) {
+		this.collegename = collegename;
 	}
 	public String getFilename() {
 		return filename;

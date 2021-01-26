@@ -1,11 +1,14 @@
 package com.alumni;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.commonfiles.Configure;
 import com.pojo.Alumni;
+import com.pojo.College;
 
 
 public class AlumniBean {
@@ -31,11 +34,37 @@ public class AlumniBean {
 		qe.setParameter("x", email);
 		qe.setParameter("y", password);
 		qe.setParameter("z","Accepted");
-		Alumni li=(Alumni) qe.list();
+		List li= qe.list();
 		tx.commit();
 		se.close();
-		if(li!=null)
-			return li;
+		if(li.size()==1)
+			return (Alumni)li.get(0);
 		return null;		
+	}
+	
+	public static Alumni updatePresent(String description,String present,int id)
+	{
+		Session se=Configure.config();
+		Transaction trx=se.beginTransaction();
+		Alumni al=se.load(Alumni.class,id);
+		al.setDescription(description);
+		al.setPresent(present);
+		se.update(al);
+		trx.commit();
+		al = se.load(Alumni.class, id);
+		if(al!=null)
+		return al;
+		return null;
+	}
+	
+	public static Alumni update(Alumni al)
+	{
+		Session se=Configure.config();
+		Transaction tx=se.beginTransaction();
+		Alumni alumni=(Alumni) se.merge(al);
+		tx.commit();
+		if(alumni!=null)
+			return alumni;
+		return null;
 	}
 }

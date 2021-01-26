@@ -44,7 +44,7 @@ body, html {
 			<li class="nav-item"><a class="nav-link"
 				href="alumni_present.jsp">Update Present Details</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="alumni_view_event.jsp">Event Info</a></li>
+				href="view_event.jsp?page=alumni">Event Info</a></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Emails Info </a>

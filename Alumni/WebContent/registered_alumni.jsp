@@ -8,8 +8,8 @@
 </head>
 <body>
 	<%@include file="college.jsp"%>
-	<h1 align="center">Welcome to Registered Alumni Page</h1>
-	<%@page import="com.pojo.Alumni,java.util.*"%>
+	<h1 align="center">Welcome to Manage Alumni Page</h1>
+	<%@page import="com.pojo.Alumni,java.util.*, com.college.CollegeAlumniBean"%>
 	<div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 38vh">
@@ -19,14 +19,13 @@
 						<form action="registered_alumni.jsp">
 
 							<div class="form-group">
-								<label>Enter Deapartment : </label> <input type="text"
+								<label>Enter Department : </label> <input type="text"
 									class="form-control" name="department"
 									placeholder="Enter Department"> <label>Enter
 									Year : </label> <input type="text" class="form-control" name="year"
 									placeholder="Enter Year"> <br> <input
 									type="submit" class="btn btn-primary" value="search"><br>
 							</div>
-
 						</form>
 					</div>
 				</div>
@@ -48,18 +47,21 @@
 				</tr>
 			</thead>
 			<%
-				String firstname = request.getParameter("firstname");
-			String rollnumber = request.getParameter("rollnumber");
-			String lastname = request.getParameter("lastname");
+				String department = request.getParameter("department");
+			String year =request.getParameter("year");
+			String cname=(String)session.getAttribute("cname");
 			List li = null;
-			/* if(firstname==null&&lastname==null&&rollnumber==null||firstname.equals("")&&lastname.equals("")&&rollnumber.equals(""))
-				 li = ManageStudentBean.getStudent();
+			 if(department==null&&year==null||department.equals("")&&year.equals(""))
+				 li = CollegeAlumniBean.getRegisteredAlumni(cname);
 			else
-				li=ManageStudentBean.getStudents(firstname,lastname,rollnumber);
+			{
+				int year1=Integer.parseInt(year);
+				li=CollegeAlumniBean.getAlumni(department,year1,cname);
+			}
 			Iterator i = li.iterator();
 			while (i.hasNext()) {
-				Student f = (Student) i.next(); */
-			Alumni f = new Alumni();
+				Alumni f = (Alumni) i.next();
+		//	Alumni f = new Alumni();
 			{
 			%>
 			<tbody>
@@ -76,7 +78,7 @@
 				</tr>
 			</tbody>
 			<%
-				}
+				}}
 			%>
 		</table>
 	</div>

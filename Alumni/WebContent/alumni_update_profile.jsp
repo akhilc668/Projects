@@ -10,7 +10,7 @@
 <%@include file="alumni.jsp" %>
 <h1 align="center">Welcome to Alumni Update Profile Page</h1>
 <%@page import="com.pojo.Alumni" %>
-<%Alumni s=new Alumni();%>
+<%Alumni s=(Alumni)session.getAttribute("alumni");%>
 <div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">
@@ -49,7 +49,7 @@
 								</select>
 							</div>
 							<div class="form-group">
-								Passed Out Year: <input type="text" class="form-control" name="collegename" value="<%=s.getYear() %>" readonly="readonly">
+								Passed Out Year: <input type="text" class="form-control" name="year" value="<%=s.getYear() %>" readonly="readonly">
 							</div>
 							<div class="form-group">
 								Address: <input type="text" class="form-control" name="address" value="<%=s.getAddress() %>" required="required">
@@ -59,6 +59,7 @@
 							</div> 
 							<input type="hidden" name="studid" value="<%=s.getAid()%>">
 							<input type="hidden" name="password" value="<%=s.getPassword()%>">
+							<input type="hidden" name="status" value="<%=s.getStatus()%>">
 							<input type="submit" class="btn btn-primary" value="update">
 							
 						</form>

@@ -45,8 +45,13 @@ body, html {
 				href="registered_alumni.jsp">Registered Alumni</a></li>
 			<li class="nav-item"><a class="nav-link" href="track_alumni.jsp">Track
 					Alumnis</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="college_events.jsp">View Events</a></li>
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbardrop"
+				data-toggle="dropdown"> Events </a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="add_event.jsp?page=college">Add Events </a><a
+						class="dropdown-item" href="view_event.jsp?page=college">View Events</a>
+				</div></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Emails Info </a>

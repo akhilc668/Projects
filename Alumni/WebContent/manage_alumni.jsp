@@ -9,7 +9,8 @@
 <body>
 	<%@include file="directorate.jsp"%>
 	<h1 align="center">Welcome to Manage Alumni Page</h1>
-	<%@page import="com.pojo.Alumni,java.util.*"%>
+	<%@page
+		import="com.pojo.Alumni,com.commonfiles.TrackAlumni,java.util.*"%>
 	<div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">
@@ -49,34 +50,43 @@
 				</tr>
 			</thead>
 			<%
-				String firstname = request.getParameter("firstname");
-			String rollnumber = request.getParameter("rollnumber");
-			String lastname = request.getParameter("lastname");
+				String year = request.getParameter("year");
+			String department = request.getParameter("department");
+			String cName = request.getParameter("collegename");
 			List li = null;
-			/* if(firstname==null&&lastname==null&&rollnumber==null||firstname.equals("")&&lastname.equals("")&&rollnumber.equals(""))
-				 li = ManageStudentBean.getStudent();
-			else
-				li=ManageStudentBean.getStudents(firstname,lastname,rollnumber);
+			if (year == null && department == null && cName == null || year.equals("") && department.equals("") && cName.equals(""))
+				li = TrackAlumni.getAlumnis();
+			else if (year.equals("")) {
+				int year1 = 0;
+				li = TrackAlumni.searchAlumni(year1, department, cName);
+			}else {
+				int year1 = Integer.parseInt(year);
+				li = TrackAlumni.searchAlumnis(year1, department, cName);
+			}
+			if (li == null) {
+			%>
+			<tbody></tbody>
+			<%
+				} else {
 			Iterator i = li.iterator();
 			while (i.hasNext()) {
-				Student f = (Student) i.next(); */
-			Alumni f = new Alumni();
-			{
+				Alumni a = (Alumni) i.next();
 			%>
 			<tbody>
 				<tr>
-					<td><%=f.getAid()%></td>
-					<td><%=f.getRollnumber()%></td>
-					<td><%=f.getFirstname() + "" + f.getLastname()%></td>
-					<td><%=f.getCollegename()%></td>
-					<td><%=f.getDepartment()%></td>
-					<td><%=f.getYear()%></td>
+					<td><%=a.getAid()%></td>
+					<td><%=a.getRollnumber()%></td>
+					<td><%=a.getFirstname() + "" + a.getLastname()%></td>
+					<td><%=a.getCollegename()%></td>
+					<td><%=a.getDepartment()%></td>
+					<td><%=a.getYear()%></td>
 					<td><a class="btn btn-primary"
-						href="./alumni_profile.jsp?id=<%=f.getAid()%>">View Alumni</a></td>
+						href="./alumni_profile.jsp?page=directorate&id=<%=a.getAid()%>">View Alumni</a></td>
 				</tr>
 			</tbody>
 			<%
 				}
+			}
 			%>
 		</table>
 	</div>

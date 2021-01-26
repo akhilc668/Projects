@@ -44,8 +44,8 @@ body, html {
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Events </a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="add_event.jsp">Add Events </a><a
-						class="dropdown-item" href="view_event.jsp">View Events</a>
+					<a class="dropdown-item" href="add_event.jsp?page=directorate">Add Events </a><a
+						class="dropdown-item" href="view_event.jsp?page=directorate">View Events</a>
 				</div></li>
 			<li class="nav-item"><a class="nav-link"
 				href="manage_alumni.jsp">Manage Alumni</a></li>

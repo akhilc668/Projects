@@ -1,0 +1,19 @@
+Employee class.
+Connection class.
+main class.
+opertion class:
+--insert().
+--update().
+	if else- 7.sid
+--display().
+	all.
+	sid.
+--delete().
+	all.
+	multiple.
+	sid.
+
+
+Employee 
+int sid;
+String name;

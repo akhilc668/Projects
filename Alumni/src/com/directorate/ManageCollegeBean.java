@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.commonfiles.Configure;
+import com.pojo.College;
 
 
 public class ManageCollegeBean {
@@ -68,6 +69,16 @@ public class ManageCollegeBean {
 			return li;
 		return null;
 	}
+	
+	public static College getCollegeById(int id) {
+		Session se=Configure.config();
+		List li=se.createQuery("from College c where c.cid=:x").setParameter("x", id).list();
+		if(li!=null) {
+			College c=(College)li.get(0);
+			return c;
+		}
+		return null;
+	} 
 	
 	
 }

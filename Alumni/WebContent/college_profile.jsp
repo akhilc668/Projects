@@ -14,50 +14,31 @@
 </head>
 <body>
 	<%@include file="directorate.jsp"%>
-	<h1>Welcome to College Profile Page</h1>
-	<!-- <div class="container">
+	<%@page import="com.pojo.College,com.directorate.ManageCollegeBean"%>
+	<%
+		int id = Integer.parseInt(request.getParameter("id"));
+	College c = ManageCollegeBean.getCollegeById(id);
+	%>
+	<h1 align="center">Welcome to College Profile Page</h1>
+	<div class="container">
 		<table class="table table-bordered table-info">
 			<tr>
-				<td>Profile</td>
-				<td></td>
+				<td>College Name:</td>
+				<td><%=c.getCname()%></td>
 			</tr>
 			<tr>
-				<td>First Name:</td>
-				<td></td>
+				<td>Email:</td>
+				<td><%=c.getEmail()%></td>
 			</tr>
 			<tr>
-				<td>Last Name:</td>
-				<td></td>
+				<td>College Code:</td>
+				<td><%=c.getCollegecode()%></td>
 			</tr>
 			<tr>
-				<td>Eamil</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Subject</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Department</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Designation</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Twitter</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Linkedin</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Facebook</td>
-				<td></td>
+				<td>Location:</td>
+				<td><%=c.getLocation()%></td>
 			</tr>
 		</table>
-	</div> -->
+	</div>
 </body>
 </html>

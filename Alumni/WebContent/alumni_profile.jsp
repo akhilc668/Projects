@@ -6,7 +6,6 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style type="text/css">
-
 #profile {
 	width: 100px;
 	height: 100px;
@@ -14,68 +13,82 @@
 </style>
 </head>
 <body>
-	<%@include file="directorate.jsp"%>
-	<h1 align="center">Welcome to Alumni Profile Page</h1>
-	<%-- <%@page import="com.pojo.student.Student,com.admin.ManageStudentBean"%>
-	
 	<%
-	int id=Integer.parseInt(request.getParameter("id"));
-		Student stud = ManageStudentBean.getStudentById(id);
-	String image = getServletContext().getInitParameter("file-download") + "" + stud.getPicture();
+		String pages = request.getParameter("page");
+	 if (pages.equals("college")) {
+	%>
+	<%@include file="college.jsp"%>
+	<h1 align="center">Welcome to College view Alumni Profile Page</h1>
+	<%
+		} else {
+	%>
+	<%@include file="directorate.jsp"%>
+	<h1 align="center">Welcome to Directorate view Alumni Profile Page</h1>
+	<%
+		}
+	%>
+	<%@page
+		import="com.pojo.Alumni,com.commonfiles.TrackAlumni, java.util.List"%>
+
+	<%
+		int id = Integer.parseInt(request.getParameter("id"));
+	Alumni a = TrackAlumni.getAlumniById(id);
+	String image = getServletContext().getInitParameter("file-download") + "" + a.getPicture();
 	System.out.println(image);
 	%>
 	<div class="container">
 		<table class="table table-bordered table-info">
+
 			<tr>
-				<td>Profile</td>
+				<td>Picture:</td>
 				<td><img src="<%=image%>" id="profile"></td>
 			</tr>
 			<tr>
 				<td>First Name:</td>
-				<td><%=stud.getFirstname()%></td>
+				<td><%=a.getFirstname()%></td>
 			</tr>
 			<tr>
 				<td>Last Name:</td>
-				<td><%=stud.getLastname()%></td>
+				<td><%=a.getLastname()%></td>
 			</tr>
 			<tr>
-				<td>Eamil</td>
-				<td><%=stud.getEmail()%></td>
+				<td>Roll Number:</td>
+				<td><%=a.getRollnumber()%></td>
 			</tr>
 			<tr>
-				<td>Phone Number</td>
-				<td><%=stud.getMobile()%></td>
+				<td>Email:</td>
+				<td><%=a.getEmail()%></td>
 			</tr>
 			<tr>
-				<td>Roll Number</td>
-				<td><%=stud.getRollnumber()%></td>
+				<td>College Name</td>
+				<td><%=a.getCollegename()%></td>
+			</tr>
+			<tr>
+				<td>Department:</td>
+				<td><%=a.getDepartment()%></td>
 			</tr>
 
 			<tr>
-				<td>Department</td>
-				<td><%=stud.getDepartment()%></td>
+				<td>Year:</td>
+				<td><%=a.getYear()%></td>
 			</tr>
 			<tr>
-				<td>Address</td>
-				<td><%=stud.getAddress()%></td>
+				<td>Mobile:</td>
+				<td><%=a.getMobile()%></td>
 			</tr>
 			<tr>
-				<td>Pincode</td>
-				<td><%=stud.getPincode()%></td>
+				<td>Address:</td>
+				<td><%=a.getAddress()%></td>
 			</tr>
 			<tr>
-				<td>Nationality</td>
-				<td><%=stud.getNationality()%></td>
+				<td>Present:</td>
+				<td><%=a.getPicture()%></td>
 			</tr>
 			<tr>
-				<td>Inter Marks</td>
-				<td><%=stud.getInter_percentage()%></td>
-			</tr>
-			<tr>
-				<td>SSC Marks</td>
-				<td><%=stud.getSsc_percentage()%></td>
+				<td>Description:</td>
+				<td><%=a.getDescription()%></td>
 			</tr>
 		</table>
-	</div> --%>
+	</div>
 </body>
 </html>
