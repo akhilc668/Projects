@@ -44,6 +44,7 @@ if(pages.equals("alumni")){
 							<div class="form-group">
 								Content: <textarea class="form-control" rows="10" cols="10" name="content"></textarea>
 							</div>
+							<input type="hidden" name="page" value="<%=pages%>">
 							<input type="submit" class="btn btn-primary" value="send">
 							
 						</form>

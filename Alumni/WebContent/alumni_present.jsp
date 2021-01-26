@@ -17,7 +17,7 @@
 			<div class="col-4">
 				<div class="card">
 					<div class="card-body">
-						<form action="./alumni_update" method="post" enctype = "multipart/form-data">
+						<form action="./alumni_present" method="post">
 							<div class="form-group">
 								Working Status: <br>
 								<%if(s.getPresent().equals("furtherstudies")){ %>

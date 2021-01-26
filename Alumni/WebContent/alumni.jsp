@@ -39,20 +39,28 @@ body, html {
 			style="width: 50px; height: 50px;"></a>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item"><a class="nav-link" href="alumni_home.jsp">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="alumni_update_profile.jsp">Update Profile</a></li>
-			<li class="nav-item"><a class="nav-link" href="alumni_present.jsp">Update Present Details</a></li>
-			<li class="nav-item"><a class="nav-link" href="alumni_view_event.jsp">Event Info</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="alumni_update_profile.jsp">Update Profile</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="alumni_present.jsp">Update Present Details</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="alumni_view_event.jsp">Event Info</a></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Emails Info </a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="compose_email.jsp?page=alumni">Compose a
-						Mail</a> <a class="dropdown-item" href="view_email.jsp?page=alumni">View Email</a>
+					<a class="dropdown-item" href="compose_email.jsp?page=alumni">Compose
+						a Mail</a><a class="dropdown-item"
+						href="received_email.jsp?page=alumni">Received Email</a> <a
+						class="dropdown-item" href="sent_email.jsp?page=alumni">sent
+						Email</a>
 				</div></li>
 			<li class="nav-item"><a class="nav-link" href="index.jsp">Logout</a></li>
 		</ul>
 
 	</nav>
-	<br><br><br>
+	<br>
+	<br>
+	<br>
 </body>
 </html>

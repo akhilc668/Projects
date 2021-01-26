@@ -57,7 +57,9 @@ body, html {
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="compose_email.jsp?page=directorate">Compose
 						a Mail</a> <a class="dropdown-item"
-						href="view_email.jsp?page=directorate">View Email</a>
+						href="received_email.jsp?page=directorate">Received Email</a>
+						<a class="dropdown-item"
+						href="sent_email.jsp?page=directorate">sent Email</a>
 				</div></li>
 			<li class="nav-item"><a class="nav-link" href="index.jsp">Logout</a></li>
 		</ul>
