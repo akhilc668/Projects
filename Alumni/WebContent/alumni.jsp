@@ -45,7 +45,9 @@ body, html {
 				href="alumni_present.jsp">Update Present Details</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="view_event.jsp?page=alumni">Event Info</a></li>
-			<li class="nav-item dropdown"><a
+			<li class="nav-item"><a class="nav-link"
+				href="compose_email.jsp?page=alumni">Compose a Mail</a></li>
+			<!-- <li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown"> Emails Info </a>
 				<div class="dropdown-menu">
@@ -54,7 +56,7 @@ body, html {
 						href="received_email.jsp?page=alumni">Received Email</a> <a
 						class="dropdown-item" href="sent_email.jsp?page=alumni">sent
 						Email</a>
-				</div></li>
+				</div></li> -->
 			<li class="nav-item"><a class="nav-link" href="index.jsp">Logout</a></li>
 		</ul>
 

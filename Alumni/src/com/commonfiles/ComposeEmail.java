@@ -19,8 +19,9 @@ public class ComposeEmail extends HttpServlet {
 		e.setEsubject(request.getParameter("subject"));
 		e.setEcontent(request.getParameter("content"));
 		String pages=request.getParameter("page");
-		boolean status=EmailBean.send(e);
-		if(status)
+		//boolean status=EmailBean.send(e);
+		boolean status1=new SendEmail().sendEmail(e);
+		if(status1)
 			response.sendRedirect("compose_email.jsp?page="+pages+"&msg=sent mail");
 		else
 			response.sendRedirect("compose_email.jsp?page="+pages+"&msg=Failed to send");

@@ -16,7 +16,7 @@ public class DirectorateLogin extends HttpServlet {
 		String password=request.getParameter("password");
 		HttpSession hs=request.getSession();
 		if(username.equals("admin")&&password.equals("admin")) {
-			hs.setAttribute("demail", "directorate@gmail.com");
+			hs.setAttribute("demail", "demosender4@gmail.com");
 			response.sendRedirect("directorate_home.jsp?msg=logined successfully");
 		}else {
 			response.sendRedirect("directorate_login.jsp?msg=logined failed");

@@ -24,7 +24,7 @@ public class AlumniLogin extends HttpServlet {
 		HttpSession hs=request.getSession();
 		if(a!=null) {
 			hs.setAttribute("alumni", a);
-			hs.setAttribute("aemail", a.getEmail());
+			hs.setAttribute("aemail", "demosender4@gmail.com");
 			response.sendRedirect("alumni_home.jsp?msg=logined successfully");
 		}
 		else
