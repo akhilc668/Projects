@@ -9,22 +9,26 @@
 <body>
 	<%
 		String pages = request.getParameter("page");
+	String email = "";
 	if (pages.equals("alumni")) {
 	%>
 	<%@include file="alumni.jsp"%>
-	<h1 align="center">Welcome to Alumni sent Emails Page</h1>
+	<h1 align="center">Welcome to Alumni Sent Email Page</h1>
 	<%
-		} else if (pages.equals("college")) {
+		email = (String) session.getAttribute("aemail");
+	} else if (pages.equals("college")) {
 	%>
 	<%@include file="college.jsp"%>
-	<h1 align="center">Welcome to College sent Emails Page</h1>
+	<h1 align="center">Welcome to College Sent Email Page</h1>
 	<%
-		} else {
+		email = (String) session.getAttribute("cemail");
+	} else {
 	%>
 	<%@include file="directorate.jsp"%>
-	<h1 align="center">Welcome to Directorate sent Emails Page</h1>
+	<h1 align="center">Welcome to Directorate Sent Email Page</h1>
 	<%
-		}
+		email = (String) session.getAttribute("demail");
+	}
 	%>
 	<%@page import="com.pojo.Email,com.commonfiles.EmailBean,java.util.*"%>
 	<div class="container">
@@ -37,17 +41,18 @@
 				</tr>
 			</thead>
 			<%
-			String email=(String)session.getAttribute("email");
-			List li=EmailBean.getSentEmails(email);
+				List li = EmailBean.getSentEmails(email);
 			Iterator i = li.iterator();
 			while (i.hasNext()) {
-				Email ce=(Email)i.next();
+				Email ce = (Email) i.next();
 			%>
 			<tbody>
 				<tr>
 					<td><%=ce.getEto()%></td>
 					<td><%=ce.getEsubject()%></td>
-					<td><a href="view_email.jsp?page=<%=pages%>&id=<%=ce.getId()%>">View Content</a></td>
+					<td><a
+						href="view_email.jsp?page=<%=pages%>&id=<%=ce.getId()%>">View
+							Content</a></td>
 				</tr>
 			</tbody>
 			<%

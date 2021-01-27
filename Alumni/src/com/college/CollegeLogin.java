@@ -25,7 +25,7 @@ public class CollegeLogin extends HttpServlet {
 		if(c!=null)
 		{
 			hs.setAttribute("college", c);
-			hs.setAttribute("email", c.getEmail());
+			hs.setAttribute("cemail", c.getEmail());
 			hs.setAttribute("cname", c.getCname());
 			response.sendRedirect("college_home.jsp?msg= login successfull");
 		}

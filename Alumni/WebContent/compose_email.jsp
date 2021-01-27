@@ -8,20 +8,26 @@
 </head>
 <body>
 <%String pages=request.getParameter("page");
+String email="";
 if(pages.equals("alumni")){
 %>
 <%@include file="alumni.jsp" %>
 <h1 align="center">Welcome to Alumni Email Page</h1>
-<%}else if(pages.equals("college")){
+<%
+email=(String)session.getAttribute("aemail");
+}else if(pages.equals("college")){
 %>
 <%@include file="college.jsp" %>
 <h1 align="center">Welcome to College Email Page</h1>
-<%}else{%>
+<%
+email=(String)session.getAttribute("cemail");
+}else{%>
 <%@include file="directorate.jsp" %>
 <h1 align="center">Welcome to Directorate Email Page</h1>
-<%} %>
+<%
+email=(String)session.getAttribute("demail");
+} %>
 
-<%String email=(String)session.getAttribute("email");%>
 <div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">
