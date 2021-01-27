@@ -53,12 +53,13 @@
 				String year = request.getParameter("year");
 			String department = request.getParameter("department");
 			String cName = request.getParameter("collegename");
+			System.out.println(year+" "+department+" "+cName);
 			List li = null;
 			if (year == null && department == null && cName == null || year.equals("") && department.equals("") && cName.equals(""))
 				li = TrackAlumni.getAlumnis();
 			else if (year.equals("")) {
 				int year1 = 0;
-				li = TrackAlumni.searchAlumni(year1, department, cName);
+				li = TrackAlumni.searchAlumnis(year1, department, cName);
 			}else {
 				int year1 = Integer.parseInt(year);
 				li = TrackAlumni.searchAlumnis(year1, department, cName);

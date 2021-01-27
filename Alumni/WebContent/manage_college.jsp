@@ -49,7 +49,7 @@
 			if(collegename==null&&ccode==null||collegename.equals("")&&ccode.equals(""))
 				 li = ManageCollegeBean.getColleges();
 			else
-				li=ManageCollegeBean.getCollege(collegename,ccode);
+				li=ManageCollegeBean.getCollegesBySearch(collegename,ccode);
 			Iterator i = li.iterator();
 			while (i.hasNext()) {
 				College f = (College) i.next();

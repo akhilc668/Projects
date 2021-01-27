@@ -38,7 +38,7 @@ public class TrackAlumni {
 	public static List getAlumnis() {
 
 		Session se = Configure.config();
-		Query qr = se.createQuery("from Alumni a where a.status='Accepted'");
+		Query qr = se.createQuery("from Alumni a where a.status=:x").setParameter("x", "Accepted");
 		List li = qr.list();
 		if (li != null)
 			return li;
