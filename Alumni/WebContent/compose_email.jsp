@@ -34,7 +34,7 @@ email=(String)session.getAttribute("demail");
 			<div class="col-8">
 				<div class="card">
 					<div class="card-body">
-						<form action="./compose_email" method="post">
+						<form action="./compose_email" method="post" enctype = "multipart/form-data">
 							<div class="form-group">
 								To: <input type="text" name="composeto"
 									class="form-control" placeholder="To email" required="required">
@@ -50,6 +50,9 @@ email=(String)session.getAttribute("demail");
 							<div class="form-group">
 								Content: <textarea class="form-control" rows="10" cols="10" name="content"></textarea>
 							</div>
+							<div class="form-group">
+								Attachment:<input type = "file" name = "file" required="required">
+							</div> 
 							<input type="hidden" name="page" value="<%=pages%>">
 							<input type="submit" class="btn btn-primary" value="send">
 							

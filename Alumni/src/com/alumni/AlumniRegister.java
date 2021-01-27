@@ -23,6 +23,7 @@ public class AlumniRegister extends HttpServlet {
 		a.setPassword(request.getParameter("password"));
 		a.setCollegename(request.getParameter("collegename"));
 		a.setDepartment(request.getParameter("department"));
+		a.setRollnumber(request.getParameter("rollnumber"));
 		a.setYear(Integer.parseInt(request.getParameter("year")));
 		boolean status = AlumniBean.register(a);
 		
