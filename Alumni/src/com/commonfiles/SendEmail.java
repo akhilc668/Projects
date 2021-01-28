@@ -1,4 +1,5 @@
 package com.commonfiles;
+
 import javax.mail.*;
 import javax.mail.internet.*;
 
@@ -17,7 +18,7 @@ public class SendEmail {
 	static String emailSubject = "Test Mail";
 	static String emailBody = ":)";
 
-	public boolean sendEmail(Email e,String path) {
+	public boolean sendEmail(Email e, String path) {
 
 		// Receiver Email Address
 		this.receiverEmailID = e.getEto();
@@ -39,22 +40,25 @@ public class SendEmail {
 			Authenticator auth = new SMTPAuthenticator();
 			Session session = Session.getInstance(props, auth);
 			MimeMessage msg = new MimeMessage(session);
-			//msg.setText(emailBody);
+
 			msg.setSubject(emailSubject);
 			msg.setFrom(new InternetAddress(senderEmailID));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(receiverEmailID));
-			
-			BodyPart messageBodyPart = new MimeBodyPart(); 
-			messageBodyPart.setText(emailBody);
-			
-			MimeBodyPart attachmentPart = new MimeBodyPart();
-			attachmentPart.attachFile(new File(path));
-			
-			Multipart multipart = new MimeMultipart();
-			multipart.addBodyPart(messageBodyPart);
-			multipart.addBodyPart(attachmentPart);
-			
-			msg.setContent(multipart);
+			if (path.equals(""))
+				msg.setText(emailBody);
+			else {
+				BodyPart messageBodyPart = new MimeBodyPart();
+				messageBodyPart.setText(emailBody);
+
+				MimeBodyPart attachmentPart = new MimeBodyPart();
+				attachmentPart.attachFile(new File(path));
+
+				Multipart multipart = new MimeMultipart();
+				multipart.addBodyPart(messageBodyPart);
+				multipart.addBodyPart(attachmentPart);
+
+				msg.setContent(multipart);
+			}
 			Transport.send(msg);
 			System.out.println("Message send Successfully:)");
 			return true;

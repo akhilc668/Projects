@@ -24,10 +24,12 @@ public class ComposeEmail extends HttpServlet {
 		String fileName = FileUpload.getFileNames(part);
 		ServletContext context = getServletContext();
 		String path=context.getInitParameter("file-upload");
-		String savePath =path+File.separator+fileName;
-		File fileSaveDir =new File(savePath);
-		part.write(savePath+File.separator);
-		
+		String savePath ="";
+		if(!fileName.equals("")) {
+			savePath=path+File.separator+fileName;
+			File fileSaveDir =new File(savePath);
+			part.write(savePath+File.separator);
+		}
 		Email e=new Email();
 		e.setEto(request.getParameter("composeto"));
 		e.setEfrom(request.getParameter("from"));

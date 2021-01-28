@@ -48,10 +48,10 @@ email=(String)session.getAttribute("demail");
 									class="form-control" placeholder="Subject" required="required">
 							</div>
 							<div class="form-group">
-								Content: <textarea class="form-control" rows="10" cols="10" name="content"></textarea>
+								Content: <textarea class="form-control" rows="10" cols="10" name="content" required="required"></textarea>
 							</div>
 							<div class="form-group">
-								Attachment:<input type = "file" name = "file" required="required">
+								Attachment:<input type = "file" name = "file">
 							</div> 
 							<input type="hidden" name="page" value="<%=pages%>">
 							<input type="submit" class="btn btn-primary" value="send">
