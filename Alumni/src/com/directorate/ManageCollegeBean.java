@@ -14,7 +14,7 @@ import com.pojo.College;
 public class ManageCollegeBean {
 	public static List getRegisteredCollege() {
 		Session se=Configure.config();
-		List li=se.createQuery("from College c where c.status=:x").setParameter("x", "none").list();
+		List li=se.createQuery("from College c").list();
 		se.close();
 		if(li!=null)
 			return li;
@@ -23,7 +23,7 @@ public class ManageCollegeBean {
 	
 	public static List getCollege(String collegename,String ccode) {
 		Session se=Configure.config();
-		List li=se.createQuery("from College c where (c.cname=:y and c.status=:x) or (c.collegecode=:z and c.status=:x)").setParameter("z", ccode).setParameter("y", collegename).setParameter("x", "none").list();
+		List li=se.createQuery("from College c where c.cname=:y  or c.collegecode=:z").setParameter("z", ccode).setParameter("y", collegename).list();
 		se.close();
 		if(li!=null)
 			return li;

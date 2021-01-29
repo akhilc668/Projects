@@ -9,7 +9,8 @@
 <body>
 	<%@include file="directorate.jsp"%>
 	<h1 align="center">Welcome to Registered College Page</h1>
-	<%@page import="com.pojo.College,com.directorate.ManageCollegeBean,java.util.*"%>
+	<%@page
+		import="com.pojo.College,com.directorate.ManageCollegeBean,java.util.*"%>
 	<div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 38vh">
@@ -43,13 +44,13 @@
 				</tr>
 			</thead>
 			<%
-			String collegename = request.getParameter("collegename");
+				String collegename = request.getParameter("collegename");
 			String ccode = request.getParameter("ccode");
 			List li = null;
-			if(collegename==null&&ccode==null||collegename.equals("")&&ccode.equals(""))
-				 li = ManageCollegeBean.getRegisteredCollege();
+			if (collegename == null && ccode == null || collegename.equals("") && ccode.equals(""))
+				li = ManageCollegeBean.getRegisteredCollege();
 			else
-				li=ManageCollegeBean.getCollege(collegename,ccode);
+				li = ManageCollegeBean.getCollege(collegename, ccode);
 			Iterator i = li.iterator();
 			while (i.hasNext()) {
 				College f = (College) i.next();
@@ -59,9 +60,18 @@
 					<td><%=f.getCid()%></td>
 					<td><%=f.getCname()%></td>
 					<td><%=f.getCollegecode()%></td>
-					<td><a class="btn btn-primary"
+					<td>
+						<%
+							if (f.getStatus().equals("none")) {
+						%><a class="btn btn-primary"
 						href="./accept_college?id=<%=f.getCid()%>">Accept </a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
-						class="btn btn-primary" href="./remove_college?id=<%=f.getCid()%>">Remove</a></td>
+						class="btn btn-primary" href="./remove_college?id=<%=f.getCid()%>">Remove</a>
+						<%
+							} else if (f.getStatus().equals("Accepted"))
+						%> Accepted<%
+							else
+						%> removed
+					</td>
 				</tr>
 			</tbody>
 			<%

@@ -14,7 +14,7 @@ public class CollegeAlumniBean {
 	{
 		Session se=Configure.config();
 		Transaction tx=se.beginTransaction();
-		List li=se.createQuery("from Alumni a where a.collegename=:y and a.status=:x").setParameter("y",cname).setParameter("x", "none").list();
+		List li=se.createQuery("from Alumni a where a.collegename=:y").setParameter("y",cname).list();
 		if(li!=null)
 			return  li;
 		else
@@ -24,7 +24,7 @@ public class CollegeAlumniBean {
 	{
 		Session se=Configure.config();
 		Transaction tx=se.beginTransaction();
-		List li=se.createQuery("from Alumni a where (a.collegename=:w and a.department=:x and a.status=:y) or (a.collegename=:w and a.year=:z and a.status=:y)").setParameter("w", cname).setParameter("x", department).setParameter("y","none").setParameter("z",year).list();
+		List li=se.createQuery("from Alumni a where (a.collegename=:w and a.department=:x ) or (a.collegename=:w and a.year=:z)").setParameter("w", cname).setParameter("x", department).setParameter("z",year).list();
 		if(li!=null)
 			return li;
 		else

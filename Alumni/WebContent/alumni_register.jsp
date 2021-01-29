@@ -43,10 +43,10 @@
 								</select>
 							</div>
 							<div class="form-group">
-								Roll Number: <input type="text" class="form-control" name="rollnumber" placeholder="Enter College Name" required="required">
+								Roll Number: <input type="text" class="form-control" name="rollnumber" placeholder="Enter Roll Number" required="required">
 							</div>
 							<div class="form-group">
-								Passed Out Year: <input type="number" class="form-control" name="year" placeholder="Enter Year" required="required">
+								Passed Out Year: <input type="number" class="form-control" name="year" min="2000" placeholder="Enter Year" required="required">
 							</div>
 							<center><input type="submit" class="btn btn-primary" value="register"><br><br>
 							<b>Already Registered?</b> <a href="alumni_login.jsp" class="btn btn-primary">Login</a>

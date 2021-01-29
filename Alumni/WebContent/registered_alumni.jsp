@@ -8,8 +8,9 @@
 </head>
 <body>
 	<%@include file="college.jsp"%>
-	<h1 align="center">Welcome to Manage Alumni Page</h1>
-	<%@page import="com.pojo.Alumni,java.util.*, com.college.CollegeAlumniBean"%>
+	<h1 align="center">Welcome to Registered Alumni Page</h1>
+	<%@page
+		import="com.pojo.Alumni,java.util.*, com.college.CollegeAlumniBean"%>
 	<div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 38vh">
@@ -48,21 +49,19 @@
 			</thead>
 			<%
 				String department = request.getParameter("department");
-			String year =request.getParameter("year");
-			String cname=(String)session.getAttribute("cname");
+			String year = request.getParameter("year");
+			String cname = (String) session.getAttribute("cname");
 			List li = null;
-			 if(department==null&&year==null||department.equals("")&&year.equals(""))
-				 li = CollegeAlumniBean.getRegisteredAlumni(cname);
-			else
-			{
-				int year1=Integer.parseInt(year);
-				li=CollegeAlumniBean.getAlumni(department,year1,cname);
+			if (department == null && year == null || department.equals("") && year.equals(""))
+				li = CollegeAlumniBean.getRegisteredAlumni(cname);
+			else {
+				int year1 = Integer.parseInt(year);
+				li = CollegeAlumniBean.getAlumni(department, year1, cname);
 			}
 			Iterator i = li.iterator();
 			while (i.hasNext()) {
 				Alumni f = (Alumni) i.next();
-		//	Alumni f = new Alumni();
-			{
+				{
 			%>
 			<tbody>
 				<tr>
@@ -72,13 +71,23 @@
 					<td><%=f.getCollegename()%></td>
 					<td><%=f.getDepartment()%></td>
 					<td><%=f.getYear()%></td>
-					<td><a class="btn btn-primary"
+					<td>
+						<%
+							if (f.getStatus().equals("none")) {
+						%> <a class="btn btn-primary"
 						href="./accept_alumni?id=<%=f.getAid()%>">Accept </a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
-						class="btn btn-primary" href="./remove_alumni?id=<%=f.getAid()%>">Remove</a></td>
+						class="btn btn-primary" href="./remove_alumni?id=<%=f.getAid()%>">Remove</a>
+						<%
+							} else if (f.getStatus().equals("Accepted"))
+						%> Accepted<%
+							else
+						%> removed
+					</td>
 				</tr>
 			</tbody>
 			<%
-				}}
+				}
+			}
 			%>
 		</table>
 	</div>

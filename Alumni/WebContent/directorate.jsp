@@ -48,8 +48,8 @@ body, html {
 						Events </a><a class="dropdown-item"
 						href="view_event.jsp?page=directorate">View Events</a>
 				</div></li>
-			<li class="nav-item"><a class="nav-link"
-				href="manage_alumni.jsp">Manage Alumni</a></li>
+			<!-- <li class="nav-item"><a class="nav-link"
+				href="manage_alumni.jsp">Manage Alumni</a></li> -->
 			<li class="nav-item"><a class="nav-link"
 				href="manage_college.jsp">Manage College</a></li>
 			<li class="nav-item"><a class="nav-link"

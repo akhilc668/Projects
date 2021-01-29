@@ -83,7 +83,6 @@
 			while (i.hasNext()) {
 				Events ce = (Events) i.next();
 				String file = path + ce.getFilename();
-				System.out.println(file);
 			%>
 			<tbody>
 				<tr>

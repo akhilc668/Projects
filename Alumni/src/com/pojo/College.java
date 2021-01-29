@@ -22,8 +22,8 @@ public class College {
 	private String password;
 	@Column(name = "ccode")
 	private String collegecode;
-	@Column(name = "location")
-	private String location;
+	@Column(name = "location",columnDefinition = "varchar(255) default 'none'")
+	private String location="none";
 	@Column(name = "status",columnDefinition = "varchar(255) default 'none'")
 	private String status="none";
 	
